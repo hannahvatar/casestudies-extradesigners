@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#242320"/><text x="30" y="115" font-family="sans-serif" font-size="72" font-weight="800" fill="#3452FF">CS</text></svg></template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  <style>
+    html, body { margin: 0; background: #F7F6F1; }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } }
+    @keyframes pie-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 24px rgba(52,82,255,0.14), 0 0 8px rgba(52,82,255,0.1); }
+      50% { box-shadow: 0 0 48px rgba(52,82,255,0.28), 0 0 16px rgba(52,82,255,0.2); }
+    }
+    a { color: #3452FF; }
+    a:hover { color: #2036CC; }
+    * { box-sizing: border-box; }
+    .material-symbols-outlined { font-family: 'Material Symbols Rounded'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #9AA8FF; border-radius: 10px; }
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="width:100%;min-height:100vh;overflow-x:hidden;overflow-y:auto;background:#F7F6F1;display:flex;justify-content:center;align-items:flex-start">
+<div style="width:100%;max-width:1920px;background:#F7F6F1;color:#242320;font-family:'Space Mono',monospace;padding:{{ pagePadding }};display:flex;flex-direction:column;gap:18px">
+
+  <div style="flex:0 0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:38px;line-height:1.2;letter-spacing:-0.5px;white-space:nowrap">Case Studies</div>
+      <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#3452FF;font-weight:700;margin-top:10px">Dashboard</div>
+    </div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <div style="font-family:'Roboto',sans-serif;font-weight:900;font-size:{{ fs16 }};letter-spacing:3px;text-transform:uppercase;color:#3452FF;border:2px solid #242320;padding:9px 18px;border-radius:100px;display:flex;align-items:center;gap:10px">Anabelle Dubois<span style="width:8px;height:8px;border-radius:50%;background:#3452FF;animation:pulse-dot 1.4s ease-in-out infinite;flex:0 0 auto"></span></div>
+      <div style="font-family:'Roboto',sans-serif;font-weight:900;font-size:{{ fs16 }};letter-spacing:3px;text-transform:uppercase;color:#3452FF;border:2px solid #242320;padding:9px 18px;border-radius:100px">Design Engineer</div>
+    </div>
+  </div>
+
+  <div style="min-height:50vh;border:2px solid #242320;border-radius:20px;padding:36px 40px;display:flex;flex-direction:{{ heroDir }};gap:36px;align-items:stretch;flex-wrap:nowrap;transition:transform 0.25s ease;animation:glow-pulse 3s ease-in-out infinite;background:#FFFFFF" style-hover="transform:scale(1.015)">
+    <div style="flex:{{ heroSideFlex }};min-width:0;display:flex;flex-direction:column;gap:16px;padding-bottom:{{ heroPadBottom }};border-bottom:{{ heroBorderBottom }}">
+      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:24px;line-height:1.2;letter-spacing:-0.3px;white-space:nowrap">Case Studies</div>
+      <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#3452FF;font-weight:700">3-Axis Expertise</div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:20px;justify-content:center;min-height:0">
+        <div style="display:flex;gap:44px;justify-content:center">
+          <sc-for list="{{ toggles }}" as="t" hint-placeholder-count="3">
+            <button onClick="{{ t.onClick }}" style="cursor:pointer;width:72px;height:190px;border-radius:100px;border:2px solid #242320;background:{{ t.bg }};position:relative;padding:0" style-hover="opacity:0.85">
+              <div style="position:absolute;left:50%;top:{{ t.dotTop }};width:46px;height:46px;border-radius:50%;background:{{ t.dotColor }};border:2px solid #242320;transform:translate(-50%,-50%);transition:top 0.25s ease"></div>
+            </button>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:44px;justify-content:center">
+          <sc-for list="{{ toggles }}" as="t" hint-placeholder-count="3">
+            <div style="width:72px;text-align:center;font-weight:700;font-size:{{ fs16 }};line-height:1.3">{{ t.abbr }}</div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex:{{ heroDividerFlex }};align-self:stretch;border-left:{{ heroBorderLeft }}"></div>
+
+    <div style="flex:{{ heroSideFlex }};min-width:0;min-height:0;display:flex;flex-direction:column;gap:20px;justify-content:space-between">
+      <div style="display:flex;justify-content:flex-end">
+        <div style="background:#3452FF;color:#FFFFFF;font-family:'Roboto',sans-serif;font-weight:900;font-size:{{ fs16 }};letter-spacing:1px;text-transform:uppercase;padding:11px 22px;border-radius:100px;white-space:nowrap">{{ activeStudy.shortTitle }}</div>
+      </div>
+      <div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap;flex:1">
+        <div style="flex:1;min-width:0">
+          <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#3452FF;font-weight:700;overflow-wrap:break-word">{{ activeStudy.client }}</div>
+          <div style="font-size:16px;margin-top:8px;line-height:1.55;overflow-wrap:break-word">{{ activeStudy.overview }}</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:auto">
+        <button onClick="{{ toggleExpanded }}" style="cursor:pointer;white-space:nowrap;font-family:'Roboto',sans-serif;font-weight:900;font-size:{{ fs16 }};letter-spacing:1px;text-transform:uppercase;background:#242320;color:#FFFFFF;border:2px solid #242320;border-radius:100px;padding:12px 24px;display:flex;align-items:center;gap:8px" style-hover="opacity:0.85">{{ expandButtonLabel }} <span style="width:12px;height:12px;border-top:2px solid #FFFFFF;border-right:2px solid #FFFFFF;transform:rotate({{ chevronRotation }}deg);display:inline-block;flex-shrink:0;transition:transform 0.2s ease"></span></button>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ expanded }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ toggleExpanded }}" style="position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:40"></div>
+    <div style="position:relative;z-index:41;border:2px solid #242320;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:24px;background:#242320;color:#FFFFFF;box-shadow:0 24px 48px rgba(0,0,0,0.35);align-items:center">
+      <div style="width:100%;max-width:900px;display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size: {{ fs16 }}; letter-spacing: 3px; text-transform: uppercase; color: #FFFFFF; font-weight: 700">{{ activeStudy.title }}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+          <div style="font-family: 'Roboto',sans-serif; font-weight: 700; font-size: 32px; color: #FFFFFF">Overview</div>
+          <button onClick="{{ toggleExpanded }}" style="cursor:pointer;flex:0 0 auto;white-space:nowrap;font-family:'Roboto',sans-serif;font-weight:900;font-size:{{ fs16 }};letter-spacing:1px;text-transform:uppercase;background:#FFFFFF;color:#242320;border:2px solid #FFFFFF;border-radius:100px;padding:10px 20px" style-hover="opacity:0.85">Hide</button>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:32px">
+        <sc-for list="{{ activeStudy.fullCopySections }}" as="sec" hint-placeholder-count="2">
+          <sc-if value="{{ sec.isMeta }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column">
+              <sc-for list="{{ sec.items }}" as="m" hint-placeholder-count="7">
+                <div style="display:grid;grid-template-columns:{{ metaCols }};gap:{{ metaGap }};padding:16px 0;border-top:1px solid #46443E">
+                  <span style="font-size:{{ fs16 }};font-weight:700;color:#FFFFFF">{{ m.key }}</span>
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px">
+                    <span style="font-size:16px;line-height:1.5;color:#FFFFFF">{{ m.value }}</span>
+                    <sc-if value="{{ m.link }}" hint-placeholder-val="{{ false }}">
+                      <a href="{{ m.link }}" target="_blank" rel="noopener" style="color:#FFFFFF;text-decoration:underline;white-space:nowrap;font-size:16px">See the proof of concept here</a>
+                    </sc-if>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="border-left: 4px solid #FFFFFF; background: #2b2a25; border-radius: 0 12px 12px 0; padding: 20px 24px; margin-top: 8px; font-family: 'Roboto',sans-serif; font-size: 17px; font-weight: 700; line-height: 1.6; color: #FFFFFF">{{ sec.note }}</div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isBridge }}" hint-placeholder-val="{{ false }}">
+            <div style="font-family:'Roboto',sans-serif;font-weight:500;font-size:22px;line-height:1.55;color:#FFFFFF;border-left:3px solid #FFFFFF;padding-left:24px">{{ sec.copy }}</div>
+          </sc-if>
+          <sc-if value="{{ sec.isPlain }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">{{ sec.label }}</div>
+              <div style="font-size:16px;line-height:1.65;color:#FFFFFF">{{ sec.copy }}</div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isProse }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 02</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="column-count:{{ sec.singleCol }};column-gap:40px">
+                <sc-for list="{{ sec.paragraphs }}" as="p" hint-placeholder-count="3">
+                  <div style="font-size:16px;line-height:1.7;color:#FFFFFF;margin-bottom:20px">{{ p }}</div>
+                </sc-for>
+              </div>
+              <sc-if value="{{ sec.bullets }}" hint-placeholder-val="{{ false }}">
+                <ul style="margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ sec.bullets }}" as="b" hint-placeholder-count="3">
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.6;color:#FFFFFF">
+                      <span class="material-symbols-outlined" style="color:#FFFFFF;font-size:20px;flex-shrink:0;line-height:1.6">arrow_right_alt</span>
+                      <span>{{ b }}</span>
+                    </li>
+                  </sc-for>
+                </ul>
+              </sc-if>
+              <div style="border-left:2px solid #46443E;padding-left:18px;font-size:14px;line-height:1.6;color:#9a988f;font-style:italic">{{ sec.aside }}</div>
+              <div style="width:100%;aspect-ratio:{{ sec.visualRatio }};border-radius:16px;overflow:hidden;border:1px solid #46443E;margin-top:8px">
+                <image-slot id="{{ sec.visualId }}" shape="rect" placeholder="{{ sec.visualPlaceholder }}" style="width:100%;height:100%"></image-slot>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isGoals }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 03</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="display:grid;grid-template-columns:{{ doubleCols }};gap:20px">
+                <sc-for list="{{ sec.items }}" as="g" hint-placeholder-count="4">
+                  <div style="border:1px solid #46443E;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;background:#2b2a25">
+                    <div style="width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center">
+                      <img src="./assets/target-icon.svg" alt="" style="width:48px;height:48px;filter:invert(100%)">
+                    </div>
+                    <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:18px;color:#FFFFFF;margin-top:6px">{{ g.label }}</div>
+                    <div style="font-size:14px;line-height:1.5;color:#c9c7bd">{{ g.sub }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isProcess }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 04</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="display:flex;flex-direction:column;gap:36px;margin-top:8px">
+                <sc-for list="{{ sec.steps }}" as="step" hint-placeholder-count="3">
+                  <div style="display:grid;grid-template-columns:{{ processCols }};gap:{{ processGap }};border-top:1px solid #46443E;padding-top:32px">
+                    <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:48px;color:#FFFFFF;line-height:1">{{ step.num }}</div>
+                    <div style="display:flex;flex-direction:column;gap:14px;max-width:820px">
+                      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:20px;color:#FFFFFF">{{ step.title }}</div>
+                      <sc-for list="{{ step.paragraphs }}" as="p" hint-placeholder-count="2">
+                        <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ p }}</div>
+                      </sc-for>
+                      <sc-if value="{{ step.bullets }}" hint-placeholder-val="{{ false }}">
+                        <ul style="margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                          <sc-for list="{{ step.bullets }}" as="b" hint-placeholder-count="3">
+                            <li style="display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.6;color:#FFFFFF">
+                              <span class="material-symbols-outlined" style="color:#FFFFFF;font-size:20px;flex-shrink:0;line-height:1.6">arrow_right_alt</span>
+                              <span>{{ b }}</span>
+                            </li>
+                          </sc-for>
+                        </ul>
+                      </sc-if>
+                      <sc-if value="{{ step.closing }}" hint-placeholder-val="{{ false }}">
+                        <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ step.closing }}</div>
+                      </sc-if>
+                      <sc-if value="{{ step.visualId }}" hint-placeholder-val="{{ false }}">
+                        <div style="width:100%;aspect-ratio:16/8;border-radius:14px;overflow:hidden;border:1px solid #46443E;margin-top:6px">
+                          <image-slot id="{{ step.visualId }}" shape="rect" placeholder="{{ step.visualPlaceholder }}" style="width:100%;height:100%"></image-slot>
+                        </div>
+                      </sc-if>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isCulture }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 05</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="column-count:{{ sec.cultureCols }};column-gap:40px">
+                <sc-for list="{{ sec.introParagraphs }}" as="p" hint-placeholder-count="2">
+                  <div style="font-size:16px;line-height:1.7;color:#FFFFFF;margin-bottom:20px;break-inside:avoid">{{ p }}</div>
+                </sc-for>
+                <ul style="margin:0 0 20px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px;break-inside:avoid">
+                  <sc-for list="{{ sec.bullets }}" as="b" hint-placeholder-count="3">
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.6;color:#FFFFFF">
+                      <span class="material-symbols-outlined" style="color:#FFFFFF;font-size:20px;flex-shrink:0;line-height:1.6">arrow_right_alt</span>
+                      <span>{{ b }}</span>
+                    </li>
+                  </sc-for>
+                </ul>
+              </div>
+              <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ sec.closing }}</div>
+              <div style="border-left:4px solid #FFFFFF;padding:8px 0 8px 28px;margin:16px 0">
+                <div style="font-family:'Roboto',sans-serif;font-weight:700;font-style:italic;font-size:32px;line-height:1.35;color:#FFFFFF">"{{ sec.quote }}"</div>
+              </div>
+              <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ sec.afterQuote }}</div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isImpact }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 06</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ sec.intro }}</div>
+              <sc-if value="{{ sec.introBullets }}" hint-placeholder-val="{{ false }}">
+                <ul style="margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ sec.introBullets }}" as="b" hint-placeholder-count="3">
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:16px;line-height:1.6;color:#FFFFFF">
+                      <span class="material-symbols-outlined" style="color:#FFFFFF;font-size:20px;flex-shrink:0;line-height:1.6">arrow_right_alt</span>
+                      <span>{{ b }}</span>
+                    </li>
+                  </sc-for>
+                </ul>
+              </sc-if>
+              <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ sec.introClosing }}</div>
+              <div style="font-size:{{ fs16 }};color:#9a988f;margin-top:4px">{{ sec.statsLabel }}</div>
+              <div style="width:100%;aspect-ratio:{{ sec.trendVisualRatio }};border-radius:16px;overflow:hidden;border:1px solid #46443E">
+                <image-slot id="{{ sec.trendVisualId }}" shape="rect" placeholder="{{ sec.trendVisualPlaceholder }}" style="width:100%;height:100%"></image-slot>
+              </div>
+              <div style="display:grid;grid-template-columns:{{ sec.statsCols }};gap:20px">
+                <sc-for list="{{ sec.stats }}" as="st" hint-placeholder-count="3">
+                  <div style="border:1px solid #46443E;border-radius:16px;padding:28px 24px;background:#2b2a25;display:flex;flex-direction:column;gap:6px">
+                    <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:44px;color:#FFFFFF;line-height:1">{{ st.value }}</div>
+                    <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:18px;color:#FFFFFF;margin-top:4px">{{ st.label }}</div>
+                    <div style="font-size:14px;color:#c9c7bd">{{ st.sub }}</div>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ sec.note }}</div>
+              <div style="border:1px solid #46443E;border-radius:16px;padding:24px;background:#1c1b18">
+                <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700;margin-bottom:10px">What We Learned</div>
+                <div style="font-size:14px;line-height:1.65;color:#c9c7bd;white-space:pre-line">{{ sec.callout }}</div>
+                <sc-if value="{{ sec.calloutBullets }}" hint-placeholder-val="{{ false }}">
+                  <ul style="margin:12px 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px">
+                    <sc-for list="{{ sec.calloutBullets }}" as="cb" hint-placeholder-count="3">
+                      <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5;color:#c9c7bd">
+                        <span class="material-symbols-outlined" style="color:#FFFFFF;font-size:16px;flex-shrink:0;line-height:1.5">arrow_right_alt</span>
+                        <span>{{ cb }}</span>
+                      </li>
+                    </sc-for>
+                  </ul>
+                </sc-if>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isNext }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid #46443E;padding-top:32px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 07</div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:26px;color:#FFFFFF">{{ sec.heading }}</div>
+              <div style="display:grid;grid-template-columns:{{ nextCols }};gap:{{ nextGap }};margin-top:8px">
+                <div style="display:flex;flex-direction:column;gap:16px">
+                  <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#9a988f;font-weight:700">Now</div>
+                  <sc-for list="{{ sec.nowParagraphs }}" as="p" hint-placeholder-count="2">
+                    <div style="font-size:16px;line-height:1.7;color:#FFFFFF">{{ p }}</div>
+                  </sc-for>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:16px">
+                  <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#9a988f;font-weight:700">Next</div>
+                  <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:12px">
+                    <sc-for list="{{ sec.priorities }}" as="pr" hint-placeholder-count="3">
+                      <li style="font-size:15px;line-height:1.6;color:#FFFFFF">{{ pr }}</li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ sec.isReflection }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:24px;border-top:2px solid #46443E;padding-top:40px;padding-bottom:8px">
+              <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;font-weight:700">Section 08</div>
+              <sc-for list="{{ sec.paragraphs }}" as="p" hint-placeholder-count="2">
+                <div style="font-size:16px;line-height:1.7;color:#FFFFFF;max-width:820px">{{ p }}</div>
+              </sc-for>
+              <div style="border-left:4px solid #FFFFFF;padding-left:24px;margin-top:12px">
+                <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:clamp(32px,4vw,44px);line-height:1.15;letter-spacing:-1px;color:#FFFFFF">{{ sec.closingLine }}</div>
+              </div>
+              <div style="font-family:'Roboto',sans-serif;font-weight:400;font-style:italic;font-size:18px;line-height:1.5;color:#c9c7bd">{{ sec.afterLine }}</div>
+            </div>
+          </sc-if>
+        </sc-for>
+      </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="display:grid;grid-template-columns:{{ doubleCols }};gap:20px">
+
+    <div style="min-width:0;border:2px solid #242320;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:14px;background:#FFFFFF">
+      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.2px">Resource Allocation</div>
+      <div style="display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap">
+        <div style="width:110px;height:110px;flex:0 0 auto;border-radius:50%;border:2px solid #242320;background:{{ approachPieGradient }};animation:pie-spin 8s linear infinite"></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ approachBreakdown }}" as="a" hint-placeholder-count="3">
+            <div style="display:flex;align-items:center;gap:9px;font-size:{{ fs16 }};font-weight:700">
+              <span style="width:13px;height:13px;border-radius:4px;border:2px solid #242320;background:{{ a.color }};flex:0 0 auto"></span>
+              <span style="white-space:nowrap">{{ a.name }} — {{ a.percent }}%</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <div style="min-width:0;border:2px solid #242320;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:14px;background:#FFFFFF">
+      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.2px">Features Usage</div>
+      <div style="height:140px;margin-top:auto;display:flex;gap:24px;align-items:flex-end;justify-content:center">
+        <sc-for list="{{ skills }}" as="skill" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;justify-content:flex-end;height:100%">
+            <div style="width:32px;height:{{ skill.level }}%;background:#3452FF;border:2px solid #242320;border-radius:8px 8px 0 0;transition:height 0.8s ease-in-out;flex-shrink:0"></div>
+            <div style="font-size:{{ fs16 }};font-weight:700;text-align:center;white-space:nowrap">{{ skill.name }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:grid;grid-template-columns:{{ tripleCols }};gap:20px">
+
+    <div style="min-width:0;border:2px solid #242320;border-radius:16px;padding:20px 28px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:#FFFFFF">
+      <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.2px">bOS (Brain Operating System)</div>
+      <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px">
+        <span style="font-weight:700;font-size:{{ fs16 }};white-space:nowrap">Design</span>
+        <div style="position:relative;flex:1;height:2px;background:#242320">
+          <div style="position:absolute;top:50%;left:{{ designPercent }}%;width:20px;height:20px;background:#3452FF;border:2px solid #242320;border-radius:50%;transform:translate(-50%,-50%)"></div>
+        </div>
+        <span style="font-weight:700;font-size:{{ fs16 }};white-space:nowrap">Dev</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:{{ fs16 }};font-weight:700">
+        <span>{{ designPercent }}%</span>
+        <span>{{ devPercent }}%</span>
+      </div>
+    </div>
+
+    <div style="min-width:0;border:2px solid #242320;border-radius:16px;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;background:#3452FF;color:#FFFFFF">
+      <div style="font-family:'Roboto',sans-serif;font-weight:900;font-size:22px;line-height:1.3;color:#FFFFFF">"Make ship happens"</div>
+      <div style="font-size:{{ fs16 }};line-height:1.4;color:#FFFFFF">— Anabelle Dubois, Design Engineer</div>
+    </div>
+
+    <div style="min-width:0;border:2px solid #242320;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:16px;background:#FFFFFF">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:{{ fs16 }};letter-spacing:-0.2px">Bot Scoreboard</div>
+        <span style="width:8px;height:8px;border-radius:50%;background:#3452FF;animation:pulse-dot 1.4s ease-in-out infinite;flex:0 0 auto"></span>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:space-between">
+        <sc-for list="{{ botStats }}" as="bot" hint-placeholder-count="3">
+          <div style="flex:1;text-align:center;display:flex;flex-direction:column;gap:2px">
+            <div style="font-family:'Roboto',sans-serif;font-weight:900;font-size:22px;color:#3452FF">{{ bot.count }}</div>
+            <div style="font-size:{{ fs16 }};font-weight:700;white-space:nowrap">{{ bot.name }}</div>
+            <div style="font-size:11px;color:#9a988f;white-space:nowrap">Tasks</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;border-top:2px solid #242320;padding-top:14px">
+    <div style="font-size:{{ fs16 }};letter-spacing:2px;text-transform:uppercase;color:#3452FF;font-weight:700">Runtime</div>
+    <div style="font-family:'Roboto',sans-serif;font-weight:700;font-size:16px">20+ years</div>
+  </div>
+
+</div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1920,&quot;height&quot;:1080},&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Case Studies&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;tagline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Anabelle Dubois — Design Engineer&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;designPercent&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:60,&quot;min&quot;:0,&quot;max&quot;:100,&quot;step&quot;:5,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { active: 'design-systems', expanded: false, livePercent: null, vw: 1920 };
+
+  data = [
+    { key: 'design-systems', abbr: 'Design Systems', title: 'Design Systems - Getty Images & iStock', shortTitle: 'Design Systems', ctaAbbr: 'DS', client: 'Getty Images & iStock',
+      overview: "Rebuilt the visual backbone for one of the world's largest image libraries: an agent ready, token-driven system now scaling consistently across products, teams, and platforms without breaking a sweat.",
+      metrics: '40% faster component adoption across teams',
+      businessGoals: 'Scale design consistency across 30+ product teams',
+      fullCopySections: [
+        { type: 'meta', items: [
+          { key: 'Company', value: 'Getty Images' },
+          { key: 'Role', value: 'Principal, Design System Lead' },
+          { key: 'Team', value: 'Product Design Manager, Senior Design System Designer, 1 dedicated engineer' },
+          { key: 'Timeline', value: 'Ongoing, ~1 year across multiple phases' },
+          { key: 'System name', value: 'Elements' },
+          { key: 'Stack', value: 'MUI → Radix migration, token-based theming' },
+          { key: 'Headline outcome', value: "Consolidated Getty + iStock onto one themeable, token-driven, AI-consumable system with zero disruption to live sites" },
+        ], note: "I architected the design system around a token-first foundation not only to enable theming and scalability, but also for AI consumption. Through semantic component architecture, structured documentation, design.md and API-ready conventions, the system was designed to be both human-readable and machine-readable." },
+        { type: 'prose', heading: 'Context & Problem', paragraphs: [
+          "Three separate pressures converged to prompt the rebuild and consolidation of the system.",
+          "First, adoption of the existing design system remained low. Although a component library existed, teams often worked outside it, leading to inconsistent experiences and duplicated work.",
+          "Second, Getty Images and iStock operated with separate UI languages and design systems. With the planned Shutterstock and Pond5 mergers underway, consolidating both brands into a single, token-first, themeable architecture became an urgent priority to prepare for future scale.",
+          "Third, engineering was independently migrating the front end from MUI to Radix, a shift that made this the right moment to rearchitect the design system around the new primitives rather than patch the old one.",
+        ], aside: "Although the merger is still pending, the architecture remains a strong, brand-agnostic foundation for future growth.",
+          visualId: 'getty-before-after', visualPlaceholder: 'Getty + iStock UI before/after — two brands, one system', visualRatio: '1672/845' },
+        { type: 'goals', heading: 'Goals', items: [
+          { label: 'Optimize productivity', sub: 'for both design and engineering workflows', icon: 'target' },
+          { label: 'Decrease inconsistency', sub: 'across products and brands', icon: 'target' },
+          { label: 'Decrease technical debt', sub: 'accumulated from years of one-off builds', icon: 'target' },
+          { label: 'Tokenize for agentic AI', sub: 'a foundation for AI-driven workflows', icon: 'target' },
+          { label: 'Consolidate through theming', sub: 'one system that scales across brands', icon: 'target' },
+          { label: 'Modernize the foundation', sub: 'migrate from MUI to Radix', icon: 'target' },
+        ] },
+        { type: 'process', heading: 'Process', steps: [
+          { num: '1', title: 'Audit first, disrupt nothing', paragraphs: [
+            "The first step was understanding the current state of the ecosystem before introducing change. I audited Getty Images and iStock products by analyzing production usage and comparing it with the existing component library.",
+            "The audit showed that adoption of the previous design system was limited. Most interfaces had been built outside the library, with many patterns implemented as one-off solutions. This meant the challenge wasn't replacing an existing system—it was creating one teams would actually use.",
+            "Because Getty Images and iStock were live, revenue-generating products, every architectural change had to preserve the existing user experience. The migration to tokens, themes, and reusable components therefore had to happen incrementally, without disrupting production.",
+          ] },
+          { num: '2', title: 'Token-first architecture', paragraphs: [
+            "I built the design system around a token-first architecture for four reasons:",
+          ], bullets: [
+            'Theming — Getty Images, iStock, and future brands could share the same components while expressing different visual identities through themes',
+            'Scalability — adding a new brand became a theming exercise rather than a redesign or re-engineering effort',
+            'Platform agnostic — tokens separate design decisions from implementation, making the system portable across web, mobile, and future platforms',
+            'AI-ready — semantic tokens, structured naming, and documentation make the system easier for AI tools to interpret and generate from',
+          ], closing: "To support this architecture, I migrated the component foundation from MUI to Radix. Moving from a styled component library to headless primitives provided greater control over theming, accessibility, and long-term flexibility while allowing the same components to serve multiple brands.",
+            visualId: 'getty-mui-radix', visualPlaceholder: 'MUI → Radix component comparison' },
+          { num: '3', title: 'Rethinking documentation', paragraphs: [
+            "Design system documentation has traditionally lived in Figma prototypes or dedicated platforms like ZeroHeight. As the system grew, I found both approaches increasingly cumbersome to maintain. Documentation became fragmented, slower to update, and harder to keep aligned with the design system as it evolved.",
+            "To address this, I built an AI-assisted documentation workflow using Claude and am developing a self-hosted documentation site. Documentation stays closer to the source of truth, is easier to maintain, and is structured for both human readers and AI tools.",
+          ] },
+        ] },
+        { type: 'culture', heading: 'Driving adoption', intro: "Building the design system was only part of the work. Equally important was helping teams adopt it in their everyday workflows.\n\nPeople naturally rely on familiar ways of working, so I approached adoption through education rather than enforcement. My goal was to help designers understand not only how to use the system, but why it was designed the way it was.\n\nTo support this, I developed a series of initiatives:",
+          bullets: [
+            'Training sessions covering design tokens, the migration from MUI to Radix, component properties, and a function-first approach to selecting components based on behavior rather than appearance',
+            'Design System Hour, recurring hands-on workshops where one representative from each product team could bring real design challenges, ask questions, and explore the system together',
+            'An adoption dashboard, built from Figma Analytics, to measure library usage, monitor adoption trends, and identify opportunities for future training',
+          ],
+          closing: "One recurring observation was that designers often created custom layouts first and looked for matching components afterward. Through ongoing training and collaboration, I encouraged a shift toward designing with the system from the start—using components as the foundation rather than adapting them after the fact.",
+          quote: "A design system succeeds when it becomes part of the team's mindset, not just their toolkit.",
+          afterQuote: "" },
+        { type: 'impact', heading: 'Impact — By the Numbers', intro: "From the beginning, I wanted adoption to be measurable rather than anecdotal. I built an analytics dashboard powered by Figma Analytics to track the health of the design system across three key indicators:",
+          introBullets: [
+            'Adoption — teams actively using the system',
+            'Reliance — new component insertions, indicating engagement and trust',
+            'Footprint — component instances across files, reflecting long-term integration',
+          ],
+          introClosing: "This data informed training priorities, identified adoption opportunities, and helped demonstrate the system's impact over time.",
+          statsLabel: 'May 2026, strongest month to date',
+          statsCols: 'repeat(3,1fr)',
+          trendVisualId: 'getty-trend-chart', trendVisualRatio: '1200/978', trendVisualPlaceholder: 'Month-over-month trend — Adoption, Reliance, Footprint (May → June)',
+          stats: [
+            { value: '+40%', label: 'Team adoption' },
+            { value: '+26.7%', label: 'Reliance', sub: 'component insertions' },
+            { value: '+25%', label: 'Footprint', sub: 'component instances' },
+          ],
+          note: 'Getty and iStock legacy footprint declined in parallel — exactly the migration pattern a healthy system should show: usage shifting off legacy libraries and onto Elements.',
+          callout: "The following month introduced a natural check on that momentum: adoption held steady at 7 teams (no regression), footprint kept growing (+10.2%), but override rates rose — concentrated almost entirely in a handful of components (Chip, Badge, Link, one icon, and Tab). Rather than reading this as a setback, I'm treating it as the instrumentation doing exactly its job: surfacing precisely where the library is missing variants or flexibility, which now feeds directly into the next iteration cycle and the ongoing training push. The data pipeline itself — going from \"we have no idea what's being used\" to \"we know exactly which five components need attention\" — is, in a real sense, the impact." },
+        { type: 'next', heading: "What's Next",
+          now: "Today, Elements powers Getty Images and iStock through a single, scalable design system. Built on tokens, semantic components, and AI-ready documentation, the architecture is designed to evolve with new brands, new platforms, and new ways of building digital products.",
+          priorities: [
+            'Deepening documentation — finishing the self-hosted docs site and continuing the AI-enhanced authoring workflow',
+            'Tightening tokens and semantics — so API-driven and agentic connections work seamlessly',
+            'Continuing the training cadence — to close the specific override gaps the analytics are surfacing',
+          ] },
+        { type: 'reflection', heading: 'Reflection',
+          paragraphs: [
+            "The biggest takeaway for me was that design systems are ultimately about enablement. Components matter, but lasting adoption comes from combining thoughtful architecture with documentation, education, and a shared way of working.",
+          ],
+          closingLine: 'Two libraries, one backbone, scaling without breaking a sweat.',
+          afterLine: "Components create consistency. Adoption creates impact." },
+      ],
+      tags: ['Design Tokens', 'Component Library', 'Governance'] },
+    { key: 'ux-design', abbr: 'UX\nDesign', title: 'UX Design', shortTitle: 'UX Design', ctaAbbr: 'UX', client: 'ServiceNow Enterprise Transformation',
+      overview: 'A research-led enterprise HR redesign around information architecture, taxonomy, content models, and service workflows.',
+      metrics: '-28% support tickets after launch',
+      businessGoals: 'Simplify energy management for 4M+ customers',
+      fullCopySections: [
+        { type: 'meta', items: [
+          { key: 'Company', value: 'Hydro-Québec' },
+          { key: 'Role', value: 'Lead Product Designer' },
+          { key: 'Team', value: 'Product Design Manager, Product Owner, HR stakeholders, IT/ServiceNow implementation partners, content writers' },
+          { key: 'Timeline', value: 'Multi-phase digital HR transformation, ~9 months' },
+          { key: 'Project name', value: 'HR Service Hub (on ServiceNow)' },
+          { key: 'Stack', value: 'ServiceNow, migrated off SAP and legacy in-house HR sites' },
+          { key: 'Headline outcome', value: 'Shifted the transformation strategy from platform-first to content-first.' },
+        ], note: "Helped leadership recognize that ServiceNow could only be as effective as the structured data and content behind it. Guided the team toward investing in information architecture, content governance, and data quality instead of expecting a new platform to solve legacy problems." },
+        { type: 'prose', heading: 'Context & Problem', oneColumn: true, paragraphs: [
+          "Three pressures converged to shape this project.",
+        ], bullets: [
+          "Hydro-Québec was in the middle of a digital HR transformation: migrating off SAP and a patchwork of in-house sites onto a single platform",
+          "Leadership wanted to optimize HR tasks and workflows with AI-assisted tooling, not just replatform what already existed",
+          "The new ticketing and HR platform, built on ServiceNow, had to serve four very different audiences at once: HR agents, admin support agents, managers, and employees",
+        ], aside: "The platform implementation exposed an information architecture problem rather than a technology problem.",
+          visualId: 'hq-nav-friction', visualPlaceholder: 'HR Service Hub navigation, before/after content restructure', visualRatio: '1672/941' },
+        { type: 'goals', heading: 'Goals', items: [
+          { label: 'Consolidate the platform', sub: 'migrate off SAP and in-house sites into ServiceNow', icon: 'target' },
+          { label: 'Optimize with AI', sub: 'streamline HR tasks and workflows with AI-assisted tooling', icon: 'target' },
+          { label: 'Personalised experience', sub: '4 segments: HR agents, admin support agents, managers, and employees', icon: 'target' },
+          { label: 'Decrease HR tickets', sub: 'significantly reduce ticket volume', icon: 'target' },
+        ] },
+        { type: 'process', heading: 'Process', steps: [
+          { num: '1', title: 'Research across four personas', paragraphs: [
+            "I ran interviews with 60 participants across four personas: HR agents, admin support agents, managers, and employees, to understand how each group actually experienced HR support.",
+          ] },
+          { num: '2', title: 'Card sorting & journey mapping', paragraphs: [
+            "Based on the research, I ran card sorting workshops to tackle the navigation friction users were describing, then journey mapping workshops to target the highest-friction paths for each persona.",
+          ] },
+          { num: '3', title: 'Consolidating content for ServiceNow', paragraphs: [
+            "The research also surfaced a huge amount of disparate HR content scattered across SAP and legacy sites. I gathered and restructured it into a consolidated article base built to power ServiceNow.",
+          ] },
+          { num: '4', title: 'Designing taxonomy & information architecture', paragraphs: [
+            "In collaboration with the AI team, I defined the taxonomy and information architecture that transformed fragmented HR content into a structured knowledge model for ServiceNow.",
+          ] },
+          { num: '5', title: 'Supporting knowledge authoring with AI', paragraphs: [
+            "I helped design an AI writing assistant that guided users in writing consistent, structured HR content, reducing the effort required to maintain the knowledge base.",
+          ] },
+        ] },
+        { type: 'culture', heading: 'Driving adoption', intro: "The hardest part of the project was helping stakeholders understand why ServiceNow wasn't delivering the experience they expected. The platform had been implemented, but much of the underlying content ecosystem, including the service catalog, knowledge articles, and information structure, was incomplete or inconsistent. When employees couldn't find answers or services, the technology was often assumed to be the problem.\n\nMy role was to shift that perspective. ServiceNow could only surface, search, and automate the information available to it. Without a well-structured service catalog, taxonomy, and knowledge content, the platform had very little to work with.",
+          bullets: [
+            'Reframed the challenge from a technology problem to an information architecture and content strategy challenge',
+            'Advocated for a structured, searchable service catalog and knowledge ecosystem as the foundation for ServiceNow, SEO, GEO, and AI-powered retrieval',
+            'Partnered with the AI team to design the taxonomy and information architecture supporting both services and knowledge',
+            'Helped develop an AI writing assistant to accelerate the creation of structured, consistent content across the platform',
+            'Trained stakeholders so the content-first mindset continued beyond the initial implementation',
+          ],
+          closing: "Once stakeholders understood that the platform was only as powerful as the information behind it, the conversation shifted away from finding a \"better system\" and toward building a scalable, structured information foundation.",
+          quote: "Technology amplifies information. If the foundation isn't structured, no platform can compensate.",
+          afterQuote: "" },
+        { type: 'impact', heading: 'Impact — By the Numbers', intro: "Research uncovered that the biggest opportunity wasn't implementing another platform, but creating the information foundation it depended on. The work focused on simplifying the service model and structuring HR knowledge into a scalable ecosystem.",
+          introBullets: [
+            '4 personas → 2 behavioral personas, simplifying the service catalog, navigation, and content model while enabling broader profile tagging for more personalized experiences.',
+            '~100 navigation sections → 20 taxonomy-driven categories, creating a scalable information architecture',
+            'From barely any to hundreds of HR articles consolidated into a structured ServiceNow knowledge base',
+          ],
+          introClosing: "This work transformed fragmented HR information into a structured service ecosystem that could support ServiceNow, enterprise search, and future AI-powered experiences.",
+          statsLabel: 'AI-Ontology Map: Entities, Relationships, and Key Concepts',
+          statsCols: 'repeat(3,1fr)',
+          trendVisualId: 'hq-content-shift', trendVisualRatio: '1536/1024', trendVisualPlaceholder: 'Engagement trend — before/after the content-first strategy',
+          stats: [
+            { value: '2', label: 'Behavioral personas', sub: '4 to 2 personas, simplifying the content model' },
+            { value: '20', label: 'Navigation Taxonomy', sub: '~100 → 20 taxonomy-driven categories, optimizing discoverability' },
+            { value: '100s', label: 'knowledge articles', sub: 'From a sparse knowledge base to hundreds of structured HR articles.' },
+          ],
+          note: "Low engagement had persisted through prior technology-only fixes. The shift only came once the organization treated content structure, not UI or platform features, as the product.",
+          callout: "The recurring pattern: stakeholders kept reaching for another technical fix when engagement stayed flat. Reframing the problem as content and findability, rather than interface or technology, is what unlocked the conversation, and eventually adoption." },
+        { type: 'next', heading: "What's Next",
+          now: "With the service catalog, taxonomy, and knowledge ecosystem in place, the next opportunity is elevating the employee experience through a stronger visual identity, refined UI, and AI-powered capabilities.",
+          priorities: [
+            'Bringing a cohesive visual identity and polished UI to the ServiceNow experience',
+            'Expanding AI-powered assistance across services and knowledge',
+            'Tracking usage and satisfaction to guide continuous improvements',
+          ] },
+        { type: 'reflection', heading: 'Reflection',
+          paragraphs: [
+            "The biggest outcome wasn't a redesigned interface. It was changing how the organization thought about information. Once the service catalog, taxonomy, and knowledge base became the product, ServiceNow, and future AI capabilities, finally had the foundation they needed.",
+          ],
+          closingLine: 'The platform was never the problem. The content was.',
+          afterLine: "Structure and findability drive adoption. Technology alone doesn't." },
+      ],
+      tags: ['Research', 'Service Design', 'Accessibility'] },
+    { key: 'development', abbr: 'Dev', title: 'Development', shortTitle: 'Development', ctaAbbr: 'Dev', client: 'Grrunch App',
+      overview: 'A Rails-based grocery price-comparison engine that scrapes, normalizes, and tracks retailer prices over time.',
+      metrics: '52% average savings across sampled products',
+      businessGoals: 'Prove out a price-comparison engine across three grocery banners',
+      fullCopySections: [
+        { type: 'meta', items: [
+          { key: 'Institution', value: 'Le Wagon Coding Bootcamp' },
+          { key: 'Role', value: 'Full-Stack Developer' },
+          { key: 'Team', value: 'Team of 4 full-stack developers, Le Wagon' },
+          { key: 'Timeline', value: '~450 hours, or 4 full-time months' },
+          { key: 'Application name', value: 'Grrunch', link: 'https://www.grrunch.com/' },
+          { key: 'Stack', value: 'Ruby on Rails, PostgreSQL, Hotwire, Web Scraping, HTML/CSS/JavaScript' },
+          { key: 'Headline outcome', value: 'Built a grocery price-comparison engine that scrapes, normalizes, and tracks live retailer prices over time' },
+        ], note: "The project that turned me from designer into design engineer." },
+        { type: 'prose', heading: 'Context & Problem', oneColumn: true, paragraphs: [
+          "Grocery prices in Quebec fluctuate constantly, and even banners under the same parent company price independently, store by store.",
+        ], bullets: [
+          "Loblaws, Maxi, and Provigo are all Loblaw Companies Ltd. brands, but each prices independently per store, with no single place to see whether the \"discount\" banner is actually cheaper for a given product on a given day",
+          "Retailer search results are client-rendered SPAs, so getting reliable pricing data meant scraping fully-rendered pages, not calling an API",
+          "A single product listing can expose up to four different price fields depending on promotions and loyalty programs, so raw scraped data isn't directly comparable",
+        ], aside: "Grrunch's premise: scrape the same basket of everyday items across all three retailers, store every price observation over time, and let a shopper search a product and immediately see which store, and which historical price point, is the best deal.",
+          visualId: 'grrunch-context', visualPlaceholder: 'Grrunch price comparison results screen', visualRatio: '1536/1024' },
+        { type: 'goals', heading: 'Goals', items: [
+          { label: 'Compare across banners', sub: 'Loblaws, Maxi, and Provigo, priced independently per store', icon: 'target' },
+          { label: 'Track price history', sub: 'store every observation over time, not just the current price', icon: 'target' },
+          { label: 'Normalize messy data', sub: 'collapse up to four price fields into one comparable number', icon: 'target' },
+          { label: 'Decouple the scraper', sub: 'run scraping as an offline batch job, not inside the request cycle', icon: 'target' },
+        ] },
+        { type: 'process', heading: 'Process', steps: [
+          { num: '1', title: 'Architecture', paragraphs: [
+            "I built the application in Ruby on Rails with a simple, end-to-end architecture. My goal wasn't to experiment with frameworks, but to understand how the frontend, backend, database, and business logic work together as one product.",
+          ] },
+          { num: '2', title: 'Decoupling the scraper', paragraphs: [
+            "Scraping retailer websites is slow and unpredictable, so I separated data collection from the application itself. The scraper runs independently, collects fresh pricing data, and imports it into PostgreSQL, making development faster, more reliable, and repeatable.",
+          ] },
+          { num: '3', title: 'Data model', paragraphs: [
+            "Five normalized tables let one product carry many price observations across stores and time: products, stores, product_prices, users/lists, and pg_search_documents. product_prices does the real work: every scrape appends a new row instead of overwriting one, so each product/store pair builds up a price history.",
+          ] },
+          { num: '4', title: 'The scraping pipeline', paragraphs: [
+            "The scraper collects pricing data from multiple retailer websites, then normalizes inconsistent formats into a single comparable dataset. Sponsored products and incomplete records are filtered out to keep the data reliable.",
+          ] },
+        ] },
+        { type: 'culture', heading: 'Price Analytics', intro: "The comparison logic itself lives on the ProductPrice model: average_price, highest_price, and lowest_price each pull every observation for a product/store pair and derive a summary figure, then feed it through a shared percentage method that recomputes a unit price proportionally to whatever aggregate price is being displayed.",
+          bullets: [
+            'Keeping that logic on the model kept the rest of the app simple, the page that lists products just filters and sorts based on what the user searches for',
+            'Search looks across both product name and brand at once, so a query finds a match no matter which field it hits',
+          ],
+          closing: "",
+          quote: "Good analytics start with good data.",
+          afterQuote: "" },
+        { type: 'impact', heading: 'Impact — By the Numbers', intro: "The proof of concept demonstrated that using Grrunch, comparing similar grocery products instead of retailer promotions, could reduce basket costs by an average of 52%.",
+          introBullets: [],
+          introClosing: "",
+          statsLabel: 'MVP sample results',
+          statsCols: '1fr',
+          trendVisualId: 'grrunch-trend', trendVisualRatio: '1126/900', trendVisualPlaceholder: 'Grrunch price comparison sample results',
+          stats: [
+            { value: '52%', label: 'Average savings', sub: 'across a dozen products, three grocery banners' },
+          ],
+          note: '',
+          callout: "Like most web-scraping projects, Grrunch has limitations.\n\nThe scraper depends on retailer page structures, so website changes require updates to the extraction logic. Search quality also depends on how consistently retailers describe their products, making normalization an ongoing challenge.\n\nIf the project were expanded further, I would explore:",
+          calloutBullets: [
+            'Scheduled automated scraping',
+            'More advanced product matching',
+            'Improved retailer normalization',
+            'Larger-scale performance optimization',
+            'Richer pricing analytics',
+          ] },
+        { type: 'next', heading: "What's Next",
+          now: "The next step is leveraging AI-enhanced workflows to bring Grrunch up to speed, and testing whether there's real value in it as grocery prices keep climbing.",
+          priorities: [
+            'Rebuilding parts of the workflow with AI-enhanced tooling',
+            'Validating real-world value as grocery prices continue to rise',
+          ] },
+        { type: 'reflection', heading: 'Reflection',
+          paragraphs: [
+            "Grrunch was the project that transformed me into a Design Engineer. Owning the product end to end taught me how every layer, from data collection and modeling to the interface, shapes the final user experience.",
+          ],
+          closingLine: 'This project made me realize how much I love building products end-to-end: from the database schema to the UI, and everything in between!',
+          afterLine: "Understanding back to front changes how you design." },
+      ],
+      tags: ['Ruby on Rails', 'PostgreSQL', 'Web Scraping'] },
+  ];
+
+  skills = [
+    { name: 'Overthinking', level: 8 },
+    { name: 'Prototyping', level: 92 },
+    { name: 'Shipping', level: 100 },
+  ];
+
+  approachBreakdown = [
+    { name: 'Design', percent: 25, color: '#3452FF' },
+    { name: 'Prototype', percent: 25, color: '#8CA0FF' },
+    { name: 'Delegate to machine', percent: 50, color: '#242320' },
+  ];
+
+  botStatsStart = [
+    { name: 'Scout', count: 340 },
+    { name: 'Hunter', count: 215 },
+    { name: 'Scribe', count: 480 },
+  ];
+  botStats = this.botStatsStart.map(b => ({ ...b }));
+
+  componentDidMount() {
+    this._t0 = Date.now();
+    const tick = () => {
+      const base = this.props.designPercent ?? 65;
+      const t = (Date.now() - this._t0) / 1000;
+      const w = t * (Math.PI / 0.8);
+      const wave = Math.sin(w) + 0.15 * Math.sin(3 * w);
+      this.setState({ livePercent: Math.max(5, Math.min(95, base + wave * 20)) });
+      this._driftRaf = requestAnimationFrame(tick);
+    };
+    this._driftRaf = requestAnimationFrame(tick);
+
+    this.setState({ skillPhase: 0 });
+    this._skillTick = setInterval(() => {
+      this.setState(s => ({ skillPhase: s.skillPhase ? 0 : 1 }));
+    }, 800);
+
+    this._liveTick = setInterval(() => {
+      const i = Math.floor(Math.random() * this.botStats.length);
+      if (this.botStats[i].count >= 999) {
+        this.botStats = this.botStatsStart.map(b => ({ ...b }));
+      } else {
+        this.botStats[i].count += 1;
+      }
+      this.forceUpdate();
+    }, 2200);
+
+    this.setState({ vw: window.innerWidth });
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    window.addEventListener('resize', this._onResize);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._liveTick);
+    cancelAnimationFrame(this._driftRaf);
+    clearInterval(this._skillTick);
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  toggle(key) {
+    this.setState(s => ({ active: s.active === key ? null : key, expanded: s.active === key ? false : s.expanded }));
+  }
+
+  toggleExpanded() {
+    this.setState(s => ({ expanded: !s.expanded }));
+  }
+
+  renderVals() {
+    const active = this.state.active;
+    const activeData = this.data.find(d => d.key === active);
+
+    const vw = this.state.vw || 1920;
+    const stacked = vw < 900;
+    const heroStacked = vw < 600;
+    const fs16 = stacked ? '14px' : '16px';
+
+    const toggles = this.data.map(d => {
+      const isActive = active === d.key;
+      return {
+        abbr: d.abbr,
+        onClick: () => this.toggle(d.key),
+        bg: isActive ? '#3452FF' : '#FFFFFF',
+        dotColor: isActive ? '#FFFFFF' : '#3452FF',
+        dotTop: stacked ? (isActive ? '29px' : 'calc(100% - 29px)') : (isActive ? '38px' : 'calc(100% - 38px)'),
+      };
+    });
+
+    return {
+      name: this.props.name || 'Case Studies',
+      tagline: this.props.tagline || 'Anabelle Dubois — Design Engineer',
+      designPercent: Math.round(this.state.livePercent ?? (this.props.designPercent ?? 65)),
+      devPercent: 100 - Math.round(this.state.livePercent ?? (this.props.designPercent ?? 65)),
+      skills: this.skills.map(s => ({
+        ...s,
+        level: s.name === 'Overthinking' ? (this.state.skillPhase ? 100 : 5)
+          : s.name === 'Prototyping' ? (this.state.skillPhase ? 5 : 100)
+          : s.name === 'Shipping' ? (this.state.skillPhase ? 5 : 100)
+          : s.level,
+      })),
+      toggles,
+      activeStudy: activeData ? { ...activeData, fullCopySections: activeData.fullCopySections.map(s => ({ ...s, isMeta: s.type === 'meta', isBridge: s.type === 'bridge', isProse: s.type === 'prose', isGoals: s.type === 'goals', isProcess: s.type === 'process', isCulture: s.type === 'culture', isImpact: s.type === 'impact', isNext: s.type === 'next', isReflection: s.type === 'reflection', isPlain: !s.type, introParagraphs: s.intro ? s.intro.split('\n\n') : [], nowParagraphs: s.now ? s.now.split('\n\n') : [], singleCol: s.oneColumn ? 1 : (stacked ? 1 : 2), cultureCols: stacked ? 1 : 2, statsCols: stacked ? '1fr' : s.statsCols })) } : { metrics: 'Select a case study above', businessGoals: '—', title: '', shortTitle: '', client: '', overview: '', fullCopySections: [], tags: [] },
+      expanded: this.state.expanded && !!activeData,
+      notExpanded: !(this.state.expanded && !!activeData),
+      toggleExpanded: () => this.toggleExpanded(),
+      expandButtonLabel: 'Read Case Study',
+      chevronRotation: this.state.expanded ? 135 : 45,
+      approachBreakdown: this.approachBreakdown,
+      approachPieGradient: (() => {
+        let acc = 0;
+        const stops = this.approachBreakdown.map(a => {
+          const start = acc; acc += a.percent;
+          return a.color + ' ' + start + '% ' + acc + '%';
+        });
+        return 'conic-gradient(' + stops.join(', ') + ')';
+      })(),
+      botStats: this.botStats,
+      fs16,
+      tripleCols: stacked ? '1fr' : '1fr 1fr 1fr',
+      proseColCount: stacked ? 1 : 2,
+      doubleCols: stacked ? '1fr' : '1fr 1fr',
+      quadCols: stacked ? '1fr' : '1fr 1fr 2fr',
+      metaCols: stacked ? '1fr' : '200px 1fr',
+      metaGap: stacked ? '6px' : '24px',
+      processCols: stacked ? '1fr' : '80px 1fr',
+      processGap: stacked ? '10px' : '28px',
+      nextCols: stacked ? '1fr' : '1.3fr 1fr',
+      nextGap: stacked ? '24px' : '48px',
+      heroDir: heroStacked ? 'column' : 'row',
+      heroSideFlex: heroStacked ? '0 0 auto' : '1 1 50%',
+      heroPadBottom: heroStacked ? '24px' : '0',
+      heroDividerFlex: heroStacked ? '0 0 0' : '0 0 2px',
+      heroBorderLeft: heroStacked ? 'none' : '2px solid #242320',
+      heroBorderBottom: heroStacked ? '2px solid #242320' : 'none',
+      pagePadding: heroStacked ? '24px 14px' : (stacked ? '32px 32px' : '40px 56px'),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
